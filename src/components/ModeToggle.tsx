@@ -1,6 +1,6 @@
 import { Icon } from '@iconify-icon/solid'
 import { VoidComponent } from 'solid-js'
-import { useAppState } from '../AppContext'
+import { useAppState } from '~/AppContext'
 
 export const ModeToggle: VoidComponent = () => {
   const context = useAppState()

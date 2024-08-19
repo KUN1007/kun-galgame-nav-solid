@@ -1,8 +1,10 @@
-import { useAppState } from '../AppContext'
+import { useAppState } from '~/AppContext'
 import { NavigationCards } from '~/components/NavigationCards'
 import { KunHeader } from '~/components/KunHeader'
 import { KunFooter } from '~/components/KunFooter'
-import type { KunCard } from '../types/card'
+import { KunAbout } from '~/components/KunAbout'
+import { CardContainer } from '~/components/CardContainer'
+import type { KunCard } from '~/types/card'
 
 const siteData: KunCard[] = [
   {
@@ -63,6 +65,15 @@ export default function Home() {
       <NavigationCards
         cards={subSiteData}
         title={<KunHeader size={2} title={t('kun.sub')} class="mt-8" />}
+      />
+
+      <CardContainer
+        content={
+          <>
+            <KunHeader size={2} title={t('kun.about')} class="mt-8" />
+            <KunAbout />
+          </>
+        }
       />
 
       <KunFooter />

@@ -2,7 +2,7 @@ import { Icon } from '@iconify-icon/solid'
 import { ParentComponent, createSignal } from 'solid-js'
 import Dismiss from 'solid-dismiss'
 import { Locale, useAppState } from '../AppContext'
-import { entries } from '../utils/entries'
+import { entries } from '~/utils/entries'
 
 const langs: Record<Locale, string> = {
   'en-us': 'English',

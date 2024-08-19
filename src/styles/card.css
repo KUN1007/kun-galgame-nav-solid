@@ -1,25 +1,3 @@
-.kun-cards {
-  position: relative;
-  padding: 0 24px;
-}
-
-@media (min-width: 640px) {
-  .kun-cards {
-    padding: 0 48px;
-  }
-}
-
-@media (min-width: 960px) {
-  .kun-cards {
-    padding: 0 64px;
-  }
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 64rem;
-}
-
 .items {
   display: flex;
   flex-wrap: wrap;

@@ -1,6 +1,6 @@
 import { Component } from 'solid-js'
-import { useAppState } from '../AppContext'
-import type { KunCard } from '../types/card'
+import { useAppState } from '~/AppContext'
+import type { KunCard } from '~/types/card'
 
 export const NavigationCard: Component<KunCard> = (props) => {
   const context = useAppState()

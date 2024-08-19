@@ -10,7 +10,7 @@ export default function Nav() {
       ? 'border-kun-blue5-light'
       : 'border-transparent hover:border-kun-blue5-light'
   return (
-    <nav class="bg-opacity-50 bg-kun-bg-light dark:bg-kun-bg-dark backdrop-blur-sm flex justify-between items-center px-8 py-2 h-16">
+    <nav class="bg-opacity-50 border-b backdrop-blur-sm flex justify-between items-center px-8 py-2 h-16">
       <a
         class="text-kun-blue5-light dark:text-kun-blue5-dark text-2xl cursor-pointer"
         href="https://github.com/KUN1007/kun-galgame-nav-solid"
