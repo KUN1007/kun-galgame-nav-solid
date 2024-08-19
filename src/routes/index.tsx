@@ -1,32 +1,48 @@
 import { useAppState } from '../AppContext'
 import { NavigationCards } from '~/components/NavigationCards'
 import { KunHeader } from '~/components/KunHeader'
+import { KunFooter } from '~/components/KunFooter'
 import type { KunCard } from '../types/card'
 
 const siteData: KunCard[] = [
   {
-    title: 'main',
-    details: '啊这可海星啊这可海星啊这可海星',
+    title: 'forum',
+    details: 'forum',
     link: 'https://www.kungal.com',
-    linkText: '网页链接'
+    githubLink: 'https://github.com/KUN1007/kun-galgame-nuxt3'
   },
   {
-    title: 'sticker'
+    title: 'backup',
+    details: 'backup',
+    link: 'https://www.kungal.com',
+    githubLink: 'https://github.com/KUN1007/kun-galgame-nuxt3'
   }
 ]
 
 const subSiteData: KunCard[] = [
   {
     title: 'sticker',
-    link: 'https://sticker.kungal.com'
+    details: 'sticker',
+    link: 'https://sticker.kungal.com',
+    githubLink: 'https://github.com/KUN1007/kun-galgame-stickers-sveltekit'
   },
   {
     title: 'documents',
-    link: 'https://soft.moe/kun-visualnovel-docs/kun-forum.html'
+    details: 'documents',
+    link: 'https://soft.moe/kun-visualnovel-docs/kun-forum.html',
+    githubLink: 'https://github.com/KUN1007/soft.moe'
   },
   {
     title: 'down',
-    link: 'https://down.kungal.com'
+    details: 'down',
+    link: 'https://down.kungal.com',
+    githubLink: 'https://github.com/KUN1007/kun-galgame-down-page'
+  },
+  {
+    title: 'nav',
+    details: 'nav',
+    link: 'https://nav.kungal.org',
+    githubLink: 'https://github.com/KUN1007/kun-galgame-nav-solid'
   }
 ]
 export default function Home() {
@@ -35,15 +51,21 @@ export default function Home() {
 
   return (
     <main class="mx-auto max-w-5x p-4">
-      <h1 class="max-6-xs text-center text-4xl text-kun-blue5-light dark:text-kun-blue5-dark font-thin my-16">
+      <h1 class="max-6-xs text-center text-4xl font-medium text-kun-blue5-light dark:text-kun-blue5-dark my-16">
         {t('kun.title')}
       </h1>
 
-      <KunHeader size={2} title="主站" class="px-16" />
-      <NavigationCards {...siteData} />
+      <NavigationCards
+        cards={siteData}
+        title={<KunHeader size={2} title={t('kun.main')} />}
+      />
 
-      <KunHeader size={2} title="子网站" class="px-16 mt-16" />
-      <NavigationCards {...subSiteData} />
+      <NavigationCards
+        cards={subSiteData}
+        title={<KunHeader size={2} title={t('kun.sub')} class="mt-8" />}
+      />
+
+      <KunFooter />
     </main>
   )
 }

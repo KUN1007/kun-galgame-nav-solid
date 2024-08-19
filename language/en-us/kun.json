@@ -1,6 +1,32 @@
 {
   "title": "KUN Visual Novel Navigation Page",
-  "main": "Main Site",
   "lightMode": "Light Mode",
-  "darkMode": "Dark Mode"
+  "darkMode": "Dark Mode",
+  "main": "Main Websites",
+  "sub": "Subsites",
+  "github": "GitHub Repository",
+  "forum": {
+    "title": "Kun Visual Novel Forum",
+    "details": "The cutest Visual Novel forum in the world! Currently the most advanced Visual Novel resource site in the world! No ads forever! Free forever! Visual Novel downloads, Visual Novel resource site."
+  },
+  "backup": {
+    "title": "Kun Visual Novel Forum Backup Site (Not Activated)",
+    "details": "Kun Visual Novel Forum Backup Site"
+  },
+  "sticker": {
+    "title": "Kun Visual Novel Stickers",
+    "details": "Visual Novel stickers website, Kun Visual Novel, Visual Novel sticker downloads, Visual Novel, stickers, downloads, Visual Novel Stickers Website."
+  },
+  "documents": {
+    "title": "Kun Visual Novel Forum Development Documentation",
+    "details": "Kun Visual Novel Forum is completely open-source and free! Development documentation is fully public!"
+  },
+  "down": {
+    "title": "Kun Visual Novel Forum Downtime Page",
+    "details": "In the event of unavoidable downtime, we will forcibly redirect the forum to this page."
+  },
+  "nav": {
+    "title": "Kun Visual Novel Navigation",
+    "details": "This website! A completely open-source navigation site! You can visit all Kun Visual Novel subsites!"
+  }
 }

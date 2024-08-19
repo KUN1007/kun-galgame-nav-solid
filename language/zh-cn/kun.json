@@ -1,6 +1,32 @@
 {
   "title": "鲲 Galgame 导航页",
-  "main": "主站",
   "lightMode": "白天模式",
-  "darkMode": "黑夜模式"
+  "darkMode": "黑夜模式",
+  "main": "主站",
+  "sub": "子网站",
+  "github": "GitHub 开源地址",
+  "forum": {
+    "title": "鲲 Galgame 论坛",
+    "details": "世界上最萌的 Galgame 论坛! 现阶段世界上最先进的 Galgame 资源发布网站! 永远不会有广告! 永远免费! Galgame 下载, Galgame 资源网站"    
+  },
+  "backup": {
+    "title": "鲲 Galgame 论坛备用网址（未启用）",
+    "details": "鲲 Galgame 论坛备用网址"
+  },
+  "sticker": {
+    "title":"鲲 Galgame 表情包",
+    "details": "Galgame 表情包网站, 鲲 Galgame, Galgame 表情包下载, Galgame, 表情包, 下载, Visual Novel Stickers Website"
+  },
+  "documents": {
+    "title": "鲲 Galgame 论坛开发文档",
+    "details": "鲲 Galgame 论坛是完全开源免费的！ 开发文档完全公开！"
+  },
+  "down": {
+    "title": "鲲 Galgame 论坛下线页面",
+    "details": "碰到不得不下线的时候, 我们会将论坛强制重定向到此页面"
+  },
+  "nav": {
+    "title": "鲲 Galgame 导航",
+    "details": "就是本网站! 完全开源的导航站！ 可以前往鲲 Galgame 所有子网站！"
+  }
 }
