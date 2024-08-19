@@ -1,0 +1,33 @@
+.kun-header {
+  margin-bottom: 1.0625rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.kun-header::before {
+  margin-right: 0.625rem;
+}
+
+.kun-header .icon {
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin-left: 0.625rem;
+}
+
+.kun-header-help {
+  margin-bottom: 1.0625rem;
+  font-size: 0.875rem;
+  font-style: oblique;
+}
+
+.size-1 {
+  font-size: 2rem;
+}
+
+.size-2 {
+  font-size: 1.5rem;
+}
+
+.size-3 {
+  font-size: 1.125rem;
+}

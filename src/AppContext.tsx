@@ -12,25 +12,34 @@ import {
 } from 'solid-js'
 import { createStore } from 'solid-js/store'
 import { Meta, Title } from '@solidjs/meta'
-
-// en dictionary is loaded by default
 import { dict as en_dict } from '../language/en-us/en'
-
-type RawDictionary = typeof en_dict
 
 export type Locale = 'en-us' | 'zh-cn'
 export type Dictionary = i18n.Flatten<RawDictionary>
-
+type RawDictionary = typeof en_dict
 type DeepPartial<T> = T extends Record<string, unknown>
   ? { [K in keyof T]?: DeepPartial<T[K]> }
   : T
+
+interface Settings {
+  locale: Locale
+  dark: boolean
+}
+
+interface AppState {
+  get isDark(): boolean
+  setDark(value: boolean): void
+  get locale(): Locale
+  setLocale(value: Locale): void
+  t: i18n.Translator<Dictionary>
+}
 
 const raw_dict_map: Record<
   Locale,
   () => Promise<{ dict: DeepPartial<RawDictionary> }>
 > = {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-explicit-any
-  'en-us': () => null as any, // en is loaded by default
+  'en-us': () => null as any,
   'zh-cn': () => import('../language/zh-cn/zh')
 }
 
@@ -46,11 +55,6 @@ const fetchDictionary = async (locale: Locale): Promise<Dictionary> => {
 
 const toLocale = (string: string): Locale | undefined =>
   string in raw_dict_map ? (string as Locale) : undefined
-
-interface Settings {
-  locale: Locale
-  dark: boolean
-}
 
 const initialLocale = (location: router.Location): Locale => {
   let locale: Locale | undefined
@@ -93,14 +97,6 @@ const deserializeSettings = (
     dark:
       'dark' in parsed && typeof parsed.dark === 'boolean' ? parsed.dark : false
   }
-}
-
-interface AppState {
-  get isDark(): boolean
-  setDark(value: boolean): void
-  get locale(): Locale
-  setLocale(value: Locale): void
-  t: i18n.Translator<Dictionary>
 }
 
 const AppContext = createContext<AppState>({} as AppState)
