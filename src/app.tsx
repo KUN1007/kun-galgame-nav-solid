@@ -12,7 +12,7 @@ export default function App() {
       <Router
         root={(props) => (
           <AppContextProvider>
-            <div>
+            <div class="bg-kun-blue0-light dark:bg-kun-blue0-dark text-kun-font-light dark:text-kun-font-dark h-lvh">
               <Nav />
               <Suspense>{props.children}</Suspense>
             </div>

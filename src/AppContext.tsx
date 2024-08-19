@@ -8,7 +8,7 @@ import {
   createEffect,
   createResource,
   startTransition,
-  useContext,
+  useContext
 } from 'solid-js'
 import { createStore } from 'solid-js/store'
 import { Meta, Title } from '@solidjs/meta'
@@ -31,12 +31,12 @@ const raw_dict_map: Record<
 > = {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-explicit-any
   'en-us': () => null as any, // en is loaded by default
-  'zh-cn': () => import('../language/zh-cn/zh'),
+  'zh-cn': () => import('../language/zh-cn/zh')
 }
 
 const en_flat_dict: Dictionary = i18n.flatten(en_dict)
 
-async function fetchDictionary(locale: Locale): Promise<Dictionary> {
+const fetchDictionary = async (locale: Locale): Promise<Dictionary> => {
   if (locale === 'en-us') return en_flat_dict
 
   const { dict } = await raw_dict_map[locale]()
@@ -52,7 +52,7 @@ interface Settings {
   dark: boolean
 }
 
-function initialLocale(location: router.Location): Locale {
+const initialLocale = (location: router.Location): Locale => {
   let locale: Locale | undefined
 
   locale = toLocale(location.query.locale)
@@ -67,17 +67,20 @@ function initialLocale(location: router.Location): Locale {
   return 'en-us'
 }
 
-function initialSettings(location: router.Location): Settings {
+const initialSettings = (location: router.Location): Settings => {
   return {
     locale: initialLocale(location),
-    dark: false,
+    dark:
+      typeof window !== 'undefined'
+        ? window.matchMedia('(prefers-color-scheme: dark)').matches
+        : false
   }
 }
 
-function deserializeSettings(
+const deserializeSettings = (
   value: string,
   location: router.Location
-): Settings {
+): Settings => {
   const parsed = JSON.parse(value) as unknown
   if (!parsed || typeof parsed !== 'object') return initialSettings(location)
 
@@ -88,9 +91,7 @@ function deserializeSettings(
         toLocale(parsed.locale)) ||
       initialLocale(location),
     dark:
-      'dark' in parsed && typeof parsed.dark === 'boolean'
-        ? parsed.dark
-        : false,
+      'dark' in parsed && typeof parsed.dark === 'boolean' ? parsed.dark : false
   }
 }
 
@@ -103,7 +104,6 @@ interface AppState {
 }
 
 const AppContext = createContext<AppState>({} as AppState)
-
 export const useAppState = () => useContext(AppContext)
 
 export const AppContextProvider: ParentComponent = (props) => {
@@ -111,7 +111,7 @@ export const AppContextProvider: ParentComponent = (props) => {
 
   const now = new Date()
   const cookieOptions: storage.CookieOptions = {
-    expires: new Date(now.getFullYear() + 1, now.getMonth(), now.getDate()),
+    expires: new Date(now.getFullYear() + 1, now.getMonth(), now.getDate())
   }
 
   const [settings, set] = storage.makePersisted(
@@ -119,14 +119,14 @@ export const AppContextProvider: ParentComponent = (props) => {
     {
       storageOptions: cookieOptions,
       storage: storage.cookieStorage,
-      deserialize: (value) => deserializeSettings(value, location),
+      deserialize: (value) => deserializeSettings(value, location)
     }
   )
 
   const locale = () => settings.locale
 
   const [dict] = createResource(locale, fetchDictionary, {
-    initialValue: en_flat_dict,
+    initialValue: en_flat_dict
   })
 
   createEffect(() => {
@@ -155,7 +155,7 @@ export const AppContextProvider: ParentComponent = (props) => {
         set('locale', value)
       })
     },
-    t,
+    t
   }
 
   return (

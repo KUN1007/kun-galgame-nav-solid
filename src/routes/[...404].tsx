@@ -1,5 +1,4 @@
-import Cookies from 'js-cookie'
-import { createMemo, Show } from 'solid-js'
+import { createMemo } from 'solid-js'
 import { A } from '@solidjs/router'
 
 const ErrorPage = () => {

@@ -8,17 +8,24 @@ module.exports = {
         kun: {
           blue0: {
             dark: '#00152e',
-            light: '#eaf8ff',
+            light: '#eaf8ff'
           },
           blue5: {
-            dark: '#00152e',
-            light: '#0969da',
+            dark: '#80ccff',
+            light: '#0969da'
           },
-          red: '#cf222e',
-          white: '#FFFFFF',
-        },
-      },
-    },
+          font: {
+            dark: '#dddddd',
+            light: '#242424'
+          },
+          bg: {
+            light: '#FFFFFF',
+            dark: '#002155'
+          },
+          red: '#cf222e'
+        }
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }

@@ -1,3 +1,4 @@
+import { Icon } from '@iconify-icon/solid'
 import { ParentComponent, createSignal } from 'solid-js'
 import Dismiss from 'solid-dismiss'
 import { Locale, useAppState } from '../AppContext'
@@ -5,7 +6,7 @@ import { entries } from '../utils/entries'
 
 const langs: Record<Locale, string> = {
   'en-us': 'English',
-  'zh-cn': '简体中文',
+  'zh-cn': '简体中文'
 }
 
 export const LanguageSelector: ParentComponent<{}> = () => {
@@ -18,29 +19,27 @@ export const LanguageSelector: ParentComponent<{}> = () => {
       <button
         aria-label="Select Language"
         ref={langBtnDesktop}
-        class="dark:brightness-150 focus:color-red-500 bg-no-repeat bg-center bg-translate bg-24 hover:border-gray-500 cursor-pointer dark:border-gray-600 dark:hover:border-gray-500 px-6 pl-4 ml-2 rounded-md h-10 border border-solid-100 pt-4 text-sm my-3 w-full"
-      />
+        class="flex justify-center items-center border px-3 py-2 ml-4 rounded-xl text-xl"
+      >
+        <span>
+          <Icon icon="lucide:languages" />
+        </span>
+      </button>
       <Dismiss
         menuButton={[langBtnDesktop]}
         open={showLangs}
         setOpen={toggleLangs}
-        class="container mx-auto left-0 right-0 bottom-0 absolute flex -mt-4 justify-end"
-        animation={{
-          appendToElement: 'menuPopup',
-          enterClass: 'opacity-0 -translate-y-5',
-          enterToClass: 'opacity-1 translate-y-0',
-          exitClass: 'opacity-1 translate-y-0',
-          exitToClass: 'opacity-0 -translate-y-4',
-        }}
+        class="left-0 right-0 bottom-0 absolute flex justify-end"
       >
-        <div class="absolute w-full md:w-96 mt-2 md:ml-12 md:mr-5 border dark:border-solid-darkbg rounded-md transition-composite bg-white dark:bg-solid-darkLighterBg shadow-md">
+        <div class="absolute right-2 top-2 bg-kun-bg-light dark:bg-kun-bg-dark p-2 rounded-xl">
+          {/* eslint-disable-next-line */}
           {entries(langs).map(([lang, label]) => (
             <button
-              class="first:rounded-t hover:bg-solid-light hover:text-white last:rounded-b border-r p-3 text-sm border-b text-center dark:border-solid-darkbg/70 w-3/6"
-              classList={{
-                'bg-solid-medium': lang == ctx.locale,
-                'hover:bg-kun-blue5-light': lang == ctx.locale,
-              }}
+              class={`flex items-center justify-center p-2 mb-1 rounded-xl w-full ${
+                lang == ctx.locale
+                  ? 'bg-kun-blue5-light text-kun-bg-light'
+                  : 'hover:bg-kun-blue0-light hover:dark:bg-kun-blue0-dark'
+              }`}
               onClick={() => {
                 ctx.setLocale(lang)
                 toggleLangs(false)
