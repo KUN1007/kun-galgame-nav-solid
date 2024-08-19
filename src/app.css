@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background-rgb: 214, 219, 220;
-  --foreground-rgb: 0, 0, 0;
+  --kungalgame-background: #eaf8ff;
+  --kungalgame-blue-5: #0969da;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-rgb: 0, 0, 0;
-    --foreground-rgb: 255, 255, 255;
+    --kungalgame-background: 0, 0, 0;
   }
 }
 
 body {
-  background: rgb(var(--background-rgb));
-  color: rgb(var(--foreground-rgb));
+  background: var(--kungalgame-background);
 }

@@ -4,16 +4,16 @@ export default function Nav() {
   const location = useLocation()
   const active = (path: string) =>
     path == location.pathname
-      ? 'border-sky-600'
-      : 'border-transparent hover:border-sky-600'
+      ? 'border-kun-blue5-light'
+      : 'border-transparent hover:border-kun-blue5-light'
   return (
-    <nav class="bg-sky-800">
-      <ul class="container flex items-center p-3 text-gray-200">
+    <nav class="bg-opacity-50 bg-kun-white backdrop-blur-sm">
+      <ul class="container flex items-center p-3 text-gray-800">
         <li class={`border-b-2 ${active('/')} mx-1.5 sm:mx-6`}>
-          <a href="/">Home</a>
+          <a href="/">English</a>
         </li>
         <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
-          <a href="/about">About</a>
+          <a href="/zh-cn">简体中文</a>
         </li>
       </ul>
     </nav>

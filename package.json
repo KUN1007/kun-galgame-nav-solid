@@ -10,6 +10,7 @@
     "@solidjs/router": "^0.14.1",
     "@solidjs/start": "^1.0.6",
     "autoprefixer": "^10.4.19",
+    "js-cookie": "^3.0.5",
     "postcss": "^8.4.38",
     "solid-i18n": "^1.1.0",
     "solid-js": "^1.8.18",
@@ -18,5 +19,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6"
   }
 }

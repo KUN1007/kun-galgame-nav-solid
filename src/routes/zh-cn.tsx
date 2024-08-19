@@ -4,28 +4,28 @@ import Counter from '~/components/Counter'
 export default function About() {
   return (
     <main class="text-center mx-auto text-gray-700 p-4">
-      <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">
-        About Page
+      <h1 class="max-6-xs text-4xl text-kun-blue5-light font-thin my-16">
+        鲲 Galgame 导航页
       </h1>
       <Counter />
       <p class="mt-8">
-        Visit{' '}
+        访问{' '}
         <a
           href="https://solidjs.com"
           target="_blank"
           rel="noreferrer"
-          class="text-sky-600 hover:underline"
+          class="text-kun-blue5-light hover:underline"
         >
-          solidjs.com
+          kungal.com
         </a>{' '}
-        to learn how to build Solid apps.
+        以获取更多信息
       </p>
       <p class="my-4">
-        <A href="/" class="text-sky-600 hover:underline">
-          Home
+        <A href="/" class="text-kun-blue5-light hover:underline">
+          English
         </A>
         {' - '}
-        <span>About Page</span>
+        <span>简体中文</span>
       </p>
     </main>
   )
