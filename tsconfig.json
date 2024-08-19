@@ -8,8 +8,8 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "allowJs": true,
-    "strict": true,
     "noEmit": true,
+    "strict": true,
     "types": ["vinxi/types/client"],
     "isolatedModules": true,
     "paths": {

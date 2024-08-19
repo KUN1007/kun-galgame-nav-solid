@@ -1,17 +1,19 @@
 {
-  "name": "example-basic",
+  "name": "example-with-tailwindcss",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "vinxi start",
-    "version": "vinxi version"
+    "start": "vinxi start"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.14.1",
     "@solidjs/start": "^1.0.6",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "solid-i18n": "^1.1.0",
     "solid-js": "^1.8.18",
+    "tailwindcss": "^3.4.3",
     "vinxi": "^0.4.1"
   },
   "engines": {
