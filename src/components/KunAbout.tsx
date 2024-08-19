@@ -1,8 +1,10 @@
 import { Show } from 'solid-js'
+import { A } from '@solidjs/router'
 import { useAppState } from '~/AppContext'
 
 export const KunAbout = () => {
   const context = useAppState()
+  const { t } = context
 
   return (
     <div class="space-y-1">
@@ -44,6 +46,12 @@ export const KunAbout = () => {
             Telegram group
           </a>
         </p>
+        <A
+          href="/loli"
+          class="underline underline-offset-2 decoration-kun-red dark:decoration-kun-blue5-dark"
+        >
+          {t('kun.loli')}
+        </A>
       </Show>
 
       <Show when={context.locale === 'zh-cn'}>
@@ -80,6 +88,12 @@ export const KunAbout = () => {
             Telegram 群组
           </a>
         </p>
+        <A
+          href="/loli"
+          class="underline underline-offset-2 decoration-kun-red dark:decoration-kun-blue5-dark"
+        >
+          {t('kun.loli')}
+        </A>
       </Show>
     </div>
   )

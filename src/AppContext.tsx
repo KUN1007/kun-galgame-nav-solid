@@ -62,10 +62,16 @@ const initialLocale = (location: router.Location): Locale => {
   locale = toLocale(location.query.locale)
   if (locale) return locale
 
-  locale = toLocale(navigator.language.slice(0, 2))
+  locale = toLocale(
+    typeof window !== 'undefined' ? navigator.language.slice(0, 2) : 'en-us'
+  )
   if (locale) return locale
 
-  locale = toLocale(navigator.language.toLocaleLowerCase())
+  locale = toLocale(
+    typeof window !== 'undefined'
+      ? navigator.language.toLocaleLowerCase()
+      : 'en-us'
+  )
   if (locale) return locale
 
   return 'en-us'
@@ -157,7 +163,7 @@ export const AppContextProvider: ParentComponent = (props) => {
   return (
     <Suspense>
       <AppContext.Provider value={state}>
-        <Title>{t('kun.title')}</Title>
+        <Title>{'KUN Visual Novel Navigation Page | 鲲 Galgame 导航页'}</Title>
         <Meta name="lang" content={locale()} />
         <div>{props.children}</div>
       </AppContext.Provider>
