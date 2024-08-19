@@ -27,7 +27,7 @@ export const KunAbout = () => {
           >
             SolidStart
           </a>{' '}
-          framework.
+          framework
         </p>
         <p>
           We recommend you press `Ctrl + D` to bookmark this page to avoid
@@ -66,7 +66,7 @@ export const KunAbout = () => {
           >
             SolidStart
           </a>{' '}
-          框架编写该网站.
+          框架编写该网站
         </p>
         <p>我们建议您 `Ctrl + D` 收藏该网页以防止与我们失去联系</p>
         <p>
