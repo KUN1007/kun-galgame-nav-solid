@@ -1,32 +1,32 @@
-# SolidStart
+![kun-galgame-nav-solid](https://www.kungal.com/kungalgame.webp)
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+**[中文版](/docs/README_zh_cn.md)**
+  
+**Contact Us: [Telegram](https://t.me/kungalgame) | [Discord](https://discord.com/invite/5F4FS2cXhX)**
 
-## Creating a project
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+  
+## Introduction
 
-# create a new project in my-app
-npm init solid@latest my-app
-```
+This is the KUN Visual Novel navigation page, designed to index KUN Visual Novel and all its subsites, preventing loss of connection due to domain changes.
 
-## Developing
+It is developed using `SolidStart`, providing incredibly fast performance.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+The address for this navigation page is **nav.kungal.org**. We recommend bookmarking it to avoid losing contact.
+  
+## Subsites
 
-```bash
-npm run dev
+KUN Visual Novel has the following websites
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+[KUN Visual Novel Forum](https://www.kungal.com) (The CUTEST Visual Novel Forum! NO ADs Forever! Free Forever!)
+[KUN Visual Novel Sticker Pack](https://sticker.kungal.com) (a website dedicated to collecting and creating Visual Novel sticker packs)
+[KUN Visual Novel Development Documentation](https://soft.moe/kun-visualnovel-docs/kun-forum.html) (this forum is entirely open source, and the development documentation will be publicly available here)
+[Kun Visual Novel Navigation Page](https://nav.kungal.org) (A completely open-source navigation site! You can visit all Kun Visual Novel subsites!)
+[Kun Visual Novel Forum Downtime Page](https://down.kungal.com) (In the event of unavoidable downtime, we will forcibly redirect the forum to this page.)
 
-## Building
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+## Open-Source Statement
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+This project adheres to the `AGPL 3.0` open-source license.
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+Thank you to every organization and friend contributing to the open-source community!
