@@ -23,7 +23,7 @@ export const KunAbout = () => {
           . We built this site using the latest{' '}
           <a
             class="underline underline-offset-2 decoration-kun-blue5-light dark:decoration-kun-blue5-dark"
-            href="https://t.me/kungalgame"
+            href="https://start.solidjs.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -46,12 +46,19 @@ export const KunAbout = () => {
             Telegram group
           </a>
         </p>
-        <A
-          href="/loli"
-          class="underline underline-offset-2 decoration-kun-red dark:decoration-kun-blue5-dark"
-        >
-          {t('kun.loli')}
-        </A>
+        <p>
+          <A
+            href="/loli"
+            class="underline underline-offset-2 decoration-kun-red dark:decoration-kun-blue5-dark"
+          >
+            {t('kun.loli')}
+          </A>
+        </p>
+        <br />
+        <p>
+          Thank you to every organization and friend contributing to the
+          open-source community!
+        </p>
       </Show>
 
       <Show when={context.locale === 'zh-cn'}>
@@ -68,7 +75,7 @@ export const KunAbout = () => {
           。 我们使用最现代的{' '}
           <a
             class="underline underline-offset-2 decoration-kun-blue5-light dark:decoration-kun-blue5-dark"
-            href="https://t.me/kungalgame"
+            href="https://start.solidjs.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -88,12 +95,16 @@ export const KunAbout = () => {
             Telegram 群组
           </a>
         </p>
-        <A
-          href="/loli"
-          class="underline underline-offset-2 decoration-kun-red dark:decoration-kun-blue5-dark"
-        >
-          {t('kun.loli')}
-        </A>
+        <p>
+          <A
+            href="/loli"
+            class="underline underline-offset-2 decoration-kun-red dark:decoration-kun-blue5-dark"
+          >
+            {t('kun.loli')}
+          </A>
+        </p>
+        <br />
+        <p>感谢为开源事业做出贡献的每个组织和朋友！</p>
       </Show>
     </div>
   )
