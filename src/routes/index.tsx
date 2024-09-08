@@ -16,8 +16,9 @@ const siteData: KunCard[] = [
   {
     title: 'backup',
     details: 'backup',
-    link: 'https://www.kungal.com',
-    githubLink: 'https://github.com/KUN1007/kun-galgame-nuxt3'
+    link: 'https://www.kungal.org',
+    githubLink: 'https://github.com/KUN1007/kun-galgame-nuxt3',
+    important: true
   }
 ]
 

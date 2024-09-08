@@ -39,6 +39,7 @@ export const NavigationCards: Component<{
                     }
                     link={feature.link}
                     githubLink={feature.githubLink}
+                    important={feature.important}
                   />
                 </div>
               )}

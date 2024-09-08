@@ -3,4 +3,5 @@ export interface KunCard {
   details?: string
   link?: string
   githubLink?: string
+  important?: boolean
 }
