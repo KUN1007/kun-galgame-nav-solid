@@ -47,7 +47,7 @@ const subSites: KunSite[] = [
   },
   {
     key: 'oauth',
-    link: 'https://oauth.kungal.com/'
+    link: 'https://account.nextmoe.com/'
   },
   {
     key: 'kunui',
